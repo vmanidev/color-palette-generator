@@ -69,10 +69,32 @@ i {
   border: none;
   border-radius: 0.5em;
   cursor: pointer;
+  outline: none;
 }
 
 #info {
   background-color: var(--secondary-text-color);
   padding: 0.5em;
   border-radius: 1em;
+}
+
+#toast-container {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#toast {
+  background-color: var(--primary-text-color);
+  color: var(--secondary-text-color);
+  padding: 0.5em;
+  border-radius: 0.5em 0 0 0.5em;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  height: 2em;
 }

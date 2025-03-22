@@ -50,7 +50,24 @@ const generatePalette = () => {
 
 const util = {
     getNewColor: () => `#${Math.floor(Math.random() * 16777215).toString().slice(0, 6)}`, //largest hex value (#FFFFFF) - 16777215
-    copyToClipboard: text => window.navigator.clipboard.writeText(text)
+    copyToClipboard: hexcode => window.navigator.clipboard.writeText(hexcode).then(() => util.showToast(hexcode)),
+    showToast: hexcode => {
+        const toast = util.createToast(`Hexcode ${hexcode} copied to clipboard`);
+        const toastContainer = document.getElementById('toast-container');
+        toastContainer.append(toast);
+        toastContainer.style.display = 'flex';
+        setTimeout(() => toast.style.display = 'none', 2000);
+    },
+    createToast: message => {
+        const toast = document.createElement('div');
+        const i = document.createElement('i');
+        const span = document.createElement('span');
+        toast.id = 'toast';
+        i.classList.add('fa-solid', 'fa-circle-check');
+        span.textContent = message;
+        toast.append(i, span);
+        return toast;
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => init());
