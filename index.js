@@ -1,7 +1,14 @@
 let colorPaletteArr = [];
 
 const init = () => {
+    //event listeners
+    document.body.addEventListener('click', e => handleClick(e.target));
 
+    const handleClick = target => {
+        if (target.id === 'generate-palette-btn') {
+            generatePaletteBtnClick();
+        }
+    }
 }
 
 const generatePaletteBtnClick = () => {
