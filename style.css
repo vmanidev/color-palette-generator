@@ -1,8 +1,9 @@
 :root {
   --background-color: #e8ecf3;
   --primary-text-color: #0c1226;
-  --button-color: #7e6cca;
+  --primary-color: #7e6cca;
   --secondary-text-color: #ffffff;
+  --secondary-color: #755ed4;
 }
 
 body {
@@ -24,7 +25,7 @@ body {
 }
 
 i {
-  color: var(--button-color);
+  color: var(--primary-color);
 }
 
 #color-palette-container {
@@ -43,6 +44,10 @@ i {
   cursor: pointer;
 }
 
+.color-palette:hover {
+  border: 2px solid var(--secondary-color);
+}
+
 .color {
   width: 95%;
   height: 90%;
@@ -57,7 +62,7 @@ i {
 }
 
 #generate-palette-btn {
-  background-color: var(--button-color);
+  background-color: var(--primary-color);
   color: var(--secondary-text-color);
   width: 15rem;
   height: 3rem;
@@ -67,12 +72,12 @@ i {
   cursor: pointer;
 }
 
+#generate-palette-btn:hover {
+  background-color: var(--secondary-color);
+}
+
 #info {
   background-color: var(--secondary-text-color);
   padding: 0.5em;
   border-radius: 1em;
-}
-
-:is(.color-palette, #generate-palette-btn):hover {
-  opacity: 0.9;
 }

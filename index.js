@@ -25,6 +25,7 @@ const generatePaletteBtnClick = () => {
         paletteIcon.style.display = 'none';
     }
     colorPaletteContainer.style.display = 'grid';
+    generatePalette();
 }
 
 const generatePalette = () => {
