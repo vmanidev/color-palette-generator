@@ -18,7 +18,7 @@ const init = () => {
         if (key === 'Space') {
             generatePaletteBtnClick();
         }
-        else if (key === 'KeyC') {
+        else if (key === 'KeyC' && colorPaletteArr.length > 0) {
             util.copyToClipboard(colorPaletteArr);
         }
     }
