@@ -3,9 +3,16 @@ let colorPaletteArr = [];
 const init = () => {
     //event listeners
     document.body.addEventListener('click', e => handleClick(e.target));
+    document.body.addEventListener('keyup', e => handleKeyup(e.code));
 
     const handleClick = target => {
         if (target.id === 'generate-palette-btn') {
+            generatePaletteBtnClick();
+        }
+    }
+
+    const handleKeyup = key => {
+        if (key === 'Space') {
             generatePaletteBtnClick();
         }
     }
