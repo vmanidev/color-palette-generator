@@ -11,4 +11,6 @@ const generatePaletteBtnClick = () => {
     colorPaletteContainer.style.display = 'grid';
 }
 
+const getNewColor = () => `#${Math.floor(Math.random() * 16777215).toString()}`; //largest hex value (#FFFFFF) - 16777215
+
 document.addEventListener('DOMContentLoaded', () => init());
