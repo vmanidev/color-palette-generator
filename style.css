@@ -28,7 +28,7 @@ i {
 }
 
 #color-palette-container {
-  display: grid;
+  display: none;
   gap: 24px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   margin: 24px auto;
@@ -44,7 +44,6 @@ i {
 }
 
 .color {
-  background-color: var(--button-color);
   width: 95%;
   height: 90%;
   margin: auto;
