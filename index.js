@@ -40,6 +40,6 @@ const generatePalette = () => {
     }
 }
 
-const getNewColor = () => `#${Math.floor(Math.random() * 16777215).toString()}`; //largest hex value (#FFFFFF) - 16777215
+const getNewColor = () => `#${Math.floor(Math.random() * 16777215).toString().slice(0, 6)}`; //largest hex value (#FFFFFF) - 16777215
 
 document.addEventListener('DOMContentLoaded', () => init());
