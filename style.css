@@ -1,16 +1,30 @@
 :root {
   --background-color: #e8ecf3;
-  --text-color: #0c1226;
+  --primary-text-color: #0c1226;
+  --button-color: #7e6cca;
+  --secondary-text-color: #ffffff;
 }
 
 body {
   background-color: var(--background-color);
-  color: var(--text-color);
+  color: var(--primary-text-color);
   width: 100vw;
   height: 100vh;
   overflow: hidden;
   font-family: sans-serif;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  justify-items: center;
+  align-items: center;
   text-align: center;
+}
+
+#palette-icon {
+  font-size: 10em;
+}
+
+i {
+  color: var(--button-color);
 }
 
 #color-palette-container {
@@ -18,10 +32,48 @@ body {
   gap: 24px;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   margin: 24px auto;
-  width: 90%;
+  width: 70%;
+}
+
+.color-palette {
+  height: 15em;
+  background-color: var(--secondary-text-color);
+  border-radius: 0.5em;
+  padding: 0.5em;
+  cursor: pointer;
 }
 
 .color {
-  border: 1px solid red;
-  height: 15em;
+  background-color: var(--button-color);
+  width: 95%;
+  height: 90%;
+  margin: auto;
+  border-radius: 0.5em;
+}
+
+.hex-value {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#generate-palette-btn {
+  background-color: var(--button-color);
+  color: var(--secondary-text-color);
+  width: 15rem;
+  height: 3rem;
+  letter-spacing: 0.5px;
+  border: none;
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+#info {
+  background-color: var(--secondary-text-color);
+  padding: 0.5em;
+  border-radius: 1em;
+}
+
+:is(.color-palette, #generate-palette-btn):hover {
+  opacity: 0.9;
 }
