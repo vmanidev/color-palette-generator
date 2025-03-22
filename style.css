@@ -3,7 +3,6 @@
   --primary-text-color: #0c1226;
   --primary-color: #7e6cca;
   --secondary-text-color: #ffffff;
-  --secondary-color: #755ed4;
 }
 
 body {
@@ -44,8 +43,8 @@ i {
   cursor: pointer;
 }
 
-.color-palette:hover {
-  border: 2px solid var(--secondary-color);
+:is(.color-palette, #generate-palette-btn):hover {
+  box-shadow: 5px 5px 10px #8f8c8cd1;
 }
 
 .color {
@@ -70,10 +69,6 @@ i {
   border: none;
   border-radius: 0.5em;
   cursor: pointer;
-}
-
-#generate-palette-btn:hover {
-  background-color: var(--secondary-color);
 }
 
 #info {
